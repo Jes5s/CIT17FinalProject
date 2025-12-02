@@ -1,7 +1,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$dbname = "wellness_db";
+$dbname = "jamespogi_db";
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 
