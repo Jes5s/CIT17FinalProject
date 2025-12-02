@@ -4,12 +4,12 @@ session_start();
 
 
 define('DB_HOST','127.0.0.1');
-define('DB_NAME','wellness_booking');
+define('DB_NAME','jamespogi');
 define('DB_USER','root');
 define('DB_PASS',''); // XAMPP default is empty
 
 
-define('BASE_URL','http://localhost/wellness');
+define('BASE_URL','http://localhost/cit17final');
 
 
 // error display for development
