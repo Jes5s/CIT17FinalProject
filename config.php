@@ -9,7 +9,8 @@ define('DB_USER', 'root');
 define('DB_PASS', ''); // XAMPP default is empty
 
 
-define('BASE_URL', 'http://localhost/cit17final');
+define('BASE_URL', 'http://localhost/CIT17FinalProject');
+
 
 
 // error display for development
