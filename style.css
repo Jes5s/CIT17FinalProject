@@ -209,3 +209,60 @@ label {
     padding: 8px;
     border-bottom: 1px solid #e0e0e0;
 }
+/* Label styles */
+.label {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    background: #e6f2ff;
+    color: #0366d6;
+    font-size: 0.9em;
+}
+
+.label-canceled {
+    background: #ffe9e9;
+    color: #d43636;
+    border: 1px solid rgba(212, 54, 54, 0.1);
+}
+
+/* Dashboard cards and actions */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.card-actions {
+    margin-top: 8px;
+}
+
+/* Buttons (you may already have similar) */
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    background: #2d9cdb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95em;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 1px solid #2d9cdb;
+    color: #2d9cdb;
+}
+
+/* Small form spacing */
+.container form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.error {
+    color: #d43636;
+}
