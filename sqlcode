@@ -1,0 +1,60 @@
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100),
+    email VARCHAR(100),
+    phone_number VARCHAR(15),
+    password VARCHAR(255),
+    role ENUM('customer','therapist','admin'),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE services (
+    service_id INT AUTO_INCREMENT PRIMARY KEY,
+    service_name VARCHAR(100),
+    description TEXT,
+    duration INT,
+    price DECIMAL(10,2),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE appointments (
+    appointment_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    therapist_id INT,
+    service_id INT,
+    appointment_date DATE,
+    start_time TIME,
+    end_time TIME,
+    status ENUM('pending','confirmed','completed','canceled'),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE payments (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    appointment_id INT,
+    amount DECIMAL(10,2),
+    payment_method ENUM('cash','credit_card','paypal'),
+    payment_status ENUM('paid','unpaid','refunded'),
+    transaction_id VARCHAR(100),
+    payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE availability (
+    availability_id INT AUTO_INCREMENT PRIMARY KEY,
+    therapist_id INT,
+    date DATE,
+    start_time TIME,
+    end_time TIME
+);
+
+CREATE TABLE reviews (
+    review_id INT AUTO_INCREMENT PRIMARY KEY,
+    appointment_id INT,
+    user_id INT,
+    rating INT,
+    comment TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
