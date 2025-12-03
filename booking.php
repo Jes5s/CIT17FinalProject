@@ -34,6 +34,11 @@ header('Location: booking_success.php?id='.$appointment_id); exit;
 }
 require_once 'inc/header.php';
 ?>
+<link rel="stylesheet" href="style.css">
+    <!--BG--> 
+    <div> 
+        <div class="wave"></div> <div class="wave"></div> <div class="wave"></div> 
+    </div>
 <h2>Book Service</h2>
 <?php if($service): ?>
  <div class="card">
